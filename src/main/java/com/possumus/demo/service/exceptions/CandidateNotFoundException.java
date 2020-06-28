@@ -12,4 +12,4 @@ public class CandidateNotFoundException extends RuntimeException {
 	    super("Could not find Candidate " + id);
 	  }
 
-	}
+}

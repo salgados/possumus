@@ -1,5 +1,7 @@
 package com.possumus.demo.persistence.entities;
 
+import java.time.Period;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -17,10 +19,10 @@ public class Skill extends BaseEntity {
 	
 	private static final long serialVersionUID = 2810534954001205428L;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne()
     @JoinColumn(name = "candidate_id", referencedColumnName = "id")
 	private Candidate candidate;
 	
 	private String technology;
-	private Double experience;
+	private Period experience;
 }
