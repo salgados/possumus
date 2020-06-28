@@ -2,7 +2,6 @@ package com.possumus.demo.persistence.entities;
 
 import java.time.Period;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;

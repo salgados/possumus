@@ -2,9 +2,6 @@ package com.possumus.demo.endpoints.dto;
 
 import java.util.Date;
 
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
 import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.Data;

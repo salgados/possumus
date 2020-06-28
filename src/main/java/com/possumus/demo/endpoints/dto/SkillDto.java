@@ -1,7 +1,5 @@
 package com.possumus.demo.endpoints.dto;
 
-import com.possumus.demo.persistence.entities.Candidate;
-
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

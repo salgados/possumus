@@ -8,7 +8,6 @@ import org.mapstruct.Mapping;
 
 import com.possumus.demo.endpoints.dto.SkillDto;
 import com.possumus.demo.endpoints.dto.SkillsDto;
-import com.possumus.demo.persistence.entities.Candidate;
 import com.possumus.demo.persistence.entities.Skill;
 
 @Mapper(uses= {CandidateMapper.class})

@@ -6,7 +6,6 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.possumus.demo.endpoints.mappers.CandidateMapper;
 import com.possumus.demo.persistence.dao.CandidateDao;
 import com.possumus.demo.persistence.entities.Candidate;
 import com.possumus.demo.service.exceptions.CandidateNotFoundException;
