@@ -20,9 +20,9 @@ public class Curriculum extends BaseEntity {
 	private static final long serialVersionUID = 7626293502764245167L;
 	
 	@Lob()
-	@Column(name = "file" ,nullable = true)
+	@Column(name = "base64" ,nullable = true)
 	@Basic(optional = false, fetch = FetchType.EAGER)
-    private byte[] file;
+    private byte[] base64;
 	
 	@OneToOne(mappedBy="contact")
 	private Candidate candidate;
