@@ -2,6 +2,7 @@ package com.possumus.demo.persistence.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -20,7 +21,7 @@ public class WorkHistory extends BaseEntity {
 	
 	private static final long serialVersionUID = -4603386377003145554L;
 	
-	@ManyToOne()
+	@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "candidate_id", referencedColumnName = "id")
 	private Candidate candidate;
 	

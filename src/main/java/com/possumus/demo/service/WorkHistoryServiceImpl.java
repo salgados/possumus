@@ -49,6 +49,7 @@ public class WorkHistoryServiceImpl implements WorkHistoryService {
 
 	@Override
 	public WorkHistory createOrUpdate(WorkHistory work) {
+		work.setCandidate(serviceCandidate.getById(work.getCandidate().getId()));
 		return repository.save(work);
 	}
 

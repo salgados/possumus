@@ -47,6 +47,7 @@ public class SkillServiceImpl implements SkillService{
 
 	@Override
 	public Skill createOrUpdate(Skill skill) {
+		skill.setCandidate(serviceCandidate.getById(skill.getCandidate().getId()));
 		return repository.save(skill);
 	}
 
