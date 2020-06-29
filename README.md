@@ -8,8 +8,17 @@ mysql> create database possumus;
 mysql> GRANT ALL PRIVILEGES ON possumus.* TO 'rrhh'@'localhost' IDENTIFIED BY 'rrhh';
 mysql>  flush privileges;
 
-#2. correr desde consola 
-mvn spring-boot:run
+## Comando para ejecutar la aplicacion base utilizando Maven:
+
+	mvn spring-boot:run
+
+
+## Setup del proyecto en Eclipse:
+
+	- Importar como proyecto maven existente.
+	- Abrir vista "Boot Dashboard".
+	- Click derecho sobre el proyecto + (Re)start.
+ 
 
 #3. documentacion de endpoints
 ingresar a la url http://localhost:8080/api/swagger-ui.html
