@@ -1,5 +1,6 @@
 package com.possumus.demo.persistence.entities;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Basic;
@@ -33,7 +34,7 @@ public class Candidate extends BaseEntity {
 	@Basic
 	@Temporal(TemporalType.DATE)
 	@Column(nullable = false)
-	private java.util.Date birthdate;
+	private Date birthdate;
 	
 	@OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "contact_id", referencedColumnName = "id")

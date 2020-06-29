@@ -2,11 +2,13 @@ package com.possumus.demo.persistence.entities;
 
 import java.util.Date;
 
-import javax.persistence.CascadeType;
+import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -19,11 +21,17 @@ public class WorkHistory extends BaseEntity {
 	
 	private static final long serialVersionUID = -4603386377003145554L;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne()
     @JoinColumn(name = "candidate_id", referencedColumnName = "id")
 	private Candidate candidate;
 	
 	private String company;
-	private Date workingFrom;
-	private Date workingTo;
+
+	@Basic
+	@Temporal(TemporalType.DATE)
+	private Date startDate;
+	
+	@Basic
+	@Temporal(TemporalType.DATE)
+	private Date endDate;
 }
