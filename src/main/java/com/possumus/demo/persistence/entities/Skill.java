@@ -1,11 +1,11 @@
 package com.possumus.demo.persistence.entities;
 
-import java.time.Period;
-
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import org.joda.time.Period;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

@@ -1,8 +1,9 @@
 package com.possumus.demo.endpoints.mappers;
 
-import java.time.Period;
+
 import java.util.List;
 
+import org.joda.time.Period;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

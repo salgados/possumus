@@ -1,15 +1,14 @@
 package com.possumus.demo.persistence.entities;
 
-import java.util.Date;
-
-import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
+import org.hibernate.annotations.Columns;
+import org.hibernate.annotations.Type;
+import org.joda.time.Interval;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -27,11 +26,7 @@ public class WorkHistory extends BaseEntity {
 	
 	private String company;
 
-	@Basic
-	@Temporal(TemporalType.DATE)
-	private Date startDate;
-	
-	@Basic
-	@Temporal(TemporalType.DATE)
-	private Date endDate;
+	@Type(type="org.jadira.usertype.dateandtime.joda.PersistentInterval")
+    @Columns(columns = { @Column(name="start"),@Column(name="end") })
+    public Interval workInterval;
 }
