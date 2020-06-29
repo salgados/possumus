@@ -1,0 +1,279 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Possumus",
+		"_postman_id": "dbfba24b-3366-9b91-a789-43dce6c88a3c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Candidate",
+			"description": "",
+			"item": [
+				{
+					"name": "CreateCandidate",
+					"request": {
+						"url": "http://localhost:8080/api/candidate/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\": \"jose\",\n    \"lastname\": \"martinez de oz\",\n    \"birthdate\": \"1950-12-31\",\n    \"contact\": {\n        \"email\": \"jose@martinez.com\",\n        \"phone\": \"114526987\"\n    },\n    \"curriculum\": {\n        \"base64\": \"RVNUTyBFUyBVTiBBUkNISVZPIERFIFBSVUVCQSBDT0RJRklDQU5ETyBZIERFQ09ESUZJQ0FORE8gQVJDSElWT1MgRU4gQkFTRTY0\"\n    }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Candidates",
+					"request": {
+						"url": "http://localhost:8080/api/candidate/",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get CandidateById",
+					"request": {
+						"url": "http://localhost:8080/api/candidate/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Candidate",
+					"request": {
+						"url": "http://localhost:8080/api/candidate/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Ac",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 5,\n    \"firstname\": \"sebastian\",\n    \"lastname\": \"salgado costa\",\n    \"birthdate\": \"1979-03-30T00:00:00.000+00:00\",\n    \"contact\": {\n        \"id\": 5,\n        \"email\": \"seba.salgado@test.com\",\n        \"phone\": \"11456987\"\n    },\n    \"curriculum\": {\n        \"id\": 5,\n        \"base64\": \"QSB2ZXIgc2kgZXN0YSBwcnVlYmEgc2UgYWN0dWFsaXph\"\n    }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete CandidateById",
+					"request": {
+						"url": "http://localhost:8080/api/candidate/1",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Skill",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Skills By CandidateId",
+					"request": {
+						"url": "http://localhost:8080/api/skill/candidate/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Skill byId",
+					"request": {
+						"url": "http://localhost:8080/api/skill/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create or update  skill",
+					"request": {
+						"url": "http://localhost:8080/api/skill/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"candidate\": {\n        \"id\": 1\n    },\n    \"technology\": \"PHP9.0\",\n    \"experience\": \"P3Y4M7D\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Skills",
+					"request": {
+						"url": "http://localhost:8080/api/skill/list",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idCandidate\":1,\n\t\"skills\": \t[\n    {\n        \"technology\": \"skill-tt\",\n        \"experience\": \"P2Y6M8D\"\n    },\n    {\n        \"technology\": \"skill-aa\",\n        \"experience\": \"P5Y4M1D\"\n    }\n]\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteById",
+					"request": {
+						"url": "http://localhost:8080/api/skill/2",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HistoryWork",
+			"description": "",
+			"item": [
+				{
+					"name": "add Works",
+					"request": {
+						"url": "http://localhost:8080/api/workhistory/list",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idCandidate\":1,\n\t\"works\":[\n\t{\n\t\t\"company\":\"Agro Seed\",\n\t\t\"startDate\":\"2017-10-31\",\n\t\t\"endDate\":\"2019-05-03\"\n\t},\n\t{\n\t\t\"company\":\"A verr\",\n\t\t\"startDate\":\"2019-07-01\"\n\t}\n\t]\n\t\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "create Work",
+					"request": {
+						"url": "http://localhost:8080/api/workhistory/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"candidate\": {\n        \"id\": 1\n    },\n    \"company\": \"CBACORD S.A\",\n    \"startDate\": \"2018-12-20\",\n    \"endDate\": \"2020-01-25\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Works By Candidate Id",
+					"request": {
+						"url": "http://localhost:8080/api/workhistory/candidate/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Work ById",
+					"request": {
+						"url": "http://localhost:8080/api/workhistory/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DeleteById",
+			"request": {
+				"url": "http://localhost:8080/api/workhistory/2",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
